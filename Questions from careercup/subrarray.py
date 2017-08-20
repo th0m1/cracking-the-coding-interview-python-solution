@@ -1,9 +1,10 @@
-#Given an array of 'array ranges' (rs), return an optimized array by
-#   deleting subarrays. Time complexity O(n*log(n)).
-#>>> subrange([(2, 6), (3, 5), (20, 21), (7, 21)])
-#    [(2, 6), (7, 21)]
-#    >>> subrange([(10, 13), (1, 8), (2, 6), (15, 18), (12, 18)])
-#    [(1, 8), (10, 13), (12, 18)]
+#Given an array of 'array ranges', return an optimized array by
+#   deleting subarrays.
+#INPUT: [(2,6),(3,5),(7,21),(20,21)]
+#  OUTPUT: [(2,6),(7,21)]
+
+OUTPUT: [(2,6),(7,21)]
+
 
 
 
@@ -19,7 +20,7 @@ def subrange1(array):
                         array[i+1]=None
       return res
 
-subrange1([(10, 13), (1, 8), (2, 6), (15, 18), (12, 18)])
+subrange1( [(2,6),(3,5),(7,21),(20,21)])
                         
 
     
