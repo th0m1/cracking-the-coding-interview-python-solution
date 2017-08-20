@@ -12,11 +12,13 @@ def subrange1(array):
             return array
       res=[]
       array.sort(key=lambda x: x[0])
-      for i in range(len(array)-1):
-            if array[i]:
-                  res.append(array[i])
-                  if array[i+1][1]<=array[i][1]:
-                        array[i+1]=None
+      i=0
+      while i < len(array)-1:
+            res.append(array[i])
+            if array[i+1][1]<=array[i][1]:
+                  i+=2
+            else:
+                  i=i+1
       return res
 
 subrange1([(10, 13), (1, 8), (2, 6), (15, 18), (12, 18)])
